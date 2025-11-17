@@ -1,5 +1,5 @@
 [package]
-name = "isg-storage"
+name = "isg-orchestrator"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -8,6 +8,11 @@ repository.workspace = true
 
 [dependencies]
 isg-core = { workspace = true }
+isg-encoders = { workspace = true }
+isg-storage = { workspace = true }
+isg-crypto = { workspace = true }
+isg-erasure = { workspace = true }
+isg-db = { workspace = true }
 
 # Async
 tokio = { workspace = true }
@@ -20,13 +25,6 @@ thiserror = { workspace = true }
 # Serialization
 serde = { workspace = true }
 serde_json = { workspace = true }
-
-# Utilities
-bytes = { workspace = true }
-uuid = { workspace = true }
-
-# HTTP clients
-reqwest = { version = "0.11", features = ["json", "multipart"] }
 
 # Time
 chrono = { workspace = true }

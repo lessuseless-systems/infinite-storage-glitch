@@ -13,9 +13,11 @@
 
 pub mod local;
 pub mod backends;
+pub mod discord;
 
 pub use backends::BackendType;
 pub use local::LocalBackend;
+pub use discord::DiscordBackend;
 
 use async_trait::async_trait;
 use isg_core::{Block, Error, Location, Result, StorageBackend};

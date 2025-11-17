@@ -10,6 +10,7 @@ members = [
     "crates/isg-tier",
     # "crates/isg-fuse",  # Optional: requires FUSE system library
     "crates/isg-sync",
+    "crates/isg-orchestrator",
     "crates/isg-cli",
     "crates/isg-tui",
 ]
@@ -69,6 +70,7 @@ isg-db = { path = "crates/isg-db" }
 isg-tier = { path = "crates/isg-tier" }
 isg-fuse = { path = "crates/isg-fuse" }
 isg-sync = { path = "crates/isg-sync" }
+isg-orchestrator = { path = "crates/isg-orchestrator" }
 
 [profile.release]
 opt-level = 3
