@@ -1,0 +1,45 @@
+# Rust
+target/
+Cargo.lock
+**/*.rs.bk
+*.pdb
+
+# ISG specific
+isg-repos-cloned/
+isg-repos-repomix/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Cache
+.cache/
+cache/
+
+# Credentials
+credentials.json
+token.json
+.env
+.env.local
+
+# Build artifacts
+dist/
+build/
+
+# MCP
+.claude/
