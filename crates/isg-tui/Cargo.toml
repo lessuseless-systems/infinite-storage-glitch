@@ -1,0 +1,24 @@
+[package]
+name = "isg-tui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+isg-core = { workspace = true }
+isg-db = { workspace = true }
+
+# TUI
+ratatui = "0.26"
+crossterm = "0.27"
+
+# Async
+tokio = { workspace = true }
+
+# Error handling
+anyhow = { workspace = true }
+
+# Logging
+tracing = { workspace = true }

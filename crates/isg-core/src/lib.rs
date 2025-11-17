@@ -16,8 +16,11 @@ pub mod hash;
 pub mod storage;
 
 pub use block::{Block, BlockMetadata};
-pub use encoding::{EncodedData, Encoder, EncodingStrategy};
+pub use encoding::{
+    ColorSpace, CompressionCodec, ECCLevel, EncodedData, Encoder, EncodingMetadata,
+    EncodingStrategy, StegoMethod,
+};
 pub use error::{Error, Result};
 pub use file::{File, FileMetadata};
 pub use hash::Hash;
-pub use storage::{Location, StorageBackend, StorageMetadata};
+pub use storage::{Location, StorageBackend, StorageMetadata, StorageStats, StorageTier};

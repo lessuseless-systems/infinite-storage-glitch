@@ -43,3 +43,6 @@ build/
 
 # MCP
 .claude/
+*.txt
+isg_storage/
+*.db

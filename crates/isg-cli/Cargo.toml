@@ -1,0 +1,44 @@
+[package]
+name = "isg-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "isg"
+path = "src/main.rs"
+
+[dependencies]
+isg-core = { workspace = true }
+isg-encoders = { workspace = true }
+isg-storage = { workspace = true }
+isg-crypto = { workspace = true }
+isg-erasure = { workspace = true }
+isg-db = { workspace = true }
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Async
+tokio = { workspace = true }
+
+# Error handling
+anyhow = { workspace = true }
+
+# Serialization
+serde_json = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+# Progress bars
+indicatif = "0.17"
+
+# Password input
+rpassword = "7.3"
+
+# Time
+chrono = { workspace = true }

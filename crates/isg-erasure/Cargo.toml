@@ -1,0 +1,23 @@
+[package]
+name = "isg-erasure"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+isg-core = { workspace = true }
+
+# Erasure coding
+reed-solomon-erasure = "6.0"
+
+# Error handling
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+
+# Utilities
+bytes = { workspace = true }
+
+# Logging
+tracing = { workspace = true }

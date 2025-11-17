@@ -38,6 +38,9 @@ pub enum Error {
     #[error("Crypto error: {0}")]
     Crypto(String),
 
+    #[error("Erasure coding error: {0}")]
+    Erasure(String),
+
     #[error("Platform error: {0}")]
     Platform(String),
 

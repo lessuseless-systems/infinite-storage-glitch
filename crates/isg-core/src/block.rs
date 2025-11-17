@@ -25,7 +25,7 @@ pub struct Block {
 }
 
 impl Block {
-    /// Create a new block from data
+    /// Create a new block from data with metadata
     pub fn new(data: Vec<u8>, metadata: BlockMetadata) -> Self {
         let hash = Hash::from_data(&data);
         let size = data.len();
@@ -37,6 +37,21 @@ impl Block {
             metadata,
             locations: Vec::new(),
         }
+    }
+
+    /// Create a new block from data with default metadata
+    pub fn from_data(data: Vec<u8>) -> Self {
+        Self::new(data, BlockMetadata::default())
+    }
+
+    /// Get the block's hash
+    pub fn hash(&self) -> &Hash {
+        &self.hash
+    }
+
+    /// Get the block's data
+    pub fn data(&self) -> &[u8] {
+        &self.data
     }
 
     /// Add a storage location

@@ -27,6 +27,7 @@ impl QREncoder {
     /// Create QR code images from data
     fn encode_to_qr_codes(&self, data: &[u8]) -> Result<Vec<RgbaImage>> {
         let chunks = data.chunks(self.max_bytes_per_qr);
+        let total_chunks = chunks.len();
         let mut qr_images = Vec::new();
 
         for (idx, chunk) in chunks.enumerate() {
@@ -45,7 +46,7 @@ impl QREncoder {
             });
 
             qr_images.push(rgba);
-            debug!("Created QR code {}/{}", idx + 1, chunks.len());
+            debug!("Created QR code {}/{}", idx + 1, total_chunks);
         }
 
         Ok(qr_images)
